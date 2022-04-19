@@ -7,6 +7,9 @@
 
 <style lang="scss">
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -21,6 +24,7 @@
     font-size: 1em;
     background: transparent;
     border: none;
+    font-weight: 300;
   }
 }
 .menu {
