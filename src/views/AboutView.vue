@@ -1,5 +1,6 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="head">
+      <div class="rond bg-1"></div>
+      <div class="rond bg-2"></div>
   </div>
 </template>
