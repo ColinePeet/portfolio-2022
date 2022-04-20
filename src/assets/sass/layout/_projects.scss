@@ -1,0 +1,176 @@
+#app {
+    font-family: "Poppins", sans-serif;
+}
+
+#projects {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .background-element {
+        background: radial-gradient(circle at center, #93d4b0 0, white 60%);
+        width: 800px;
+        height: 800px;
+        border-radius: 100%;
+        position: absolute;
+        top: -10%;
+        left: 0%;
+        z-index: -1;
+    }
+
+    .navigation-projects {
+        position: absolute;
+        width: 100vw;
+        border-top: .5px solid rgba($color: #333333, $alpha: 0.15);
+        top: 50%;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+
+        button {
+            background-color: transparent;
+            border: none;
+            font-size: .85em;
+            font-weight: 300;
+            margin: 5px 0;
+        }
+    }
+
+    .navigation-arrows {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        z-index: 1;
+        button {
+            background-color: transparent;
+            border: .5px solid rgba($color: #333333, $alpha: 0.3);
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+        }
+    }
+}
+
+.project {
+    margin-top: 80px;
+    width: 700px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    .img {
+        width: 700px;
+        position: relative;
+
+        img.project-img {
+            width: 100%;
+            border-radius: 3px;
+            box-shadow: 1px 5px 40px rgba($color: #000000, $alpha: 0.1);
+        }
+
+        .links {
+            position: absolute;
+            left: 710px;
+            bottom: 0;
+            width: fit-content;
+
+            img {
+                width: 25px;
+                margin: 0 5px;
+            }
+
+            button {
+                display: block;
+                background: transparent;
+                border: 1px solid rgba($color: #333333, $alpha: 0.3);
+                border-radius: 30px;
+                padding: 8px 18px;
+                font-weight: 600;
+                font-size: .9em;
+                margin: 5px;
+
+                i {
+                    font-size: 12px;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+
+    .englobe-title {
+        background: rgba($color: white, $alpha: 0.75);
+        box-shadow: 1px 5px 30px rgba($color: #000000, $alpha: 0.05);
+        width: 180px;
+        height: 180px;
+        border-radius: 100%;
+        text-align: center;
+        position: absolute;
+        top: 0px;
+        left: -130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+
+        p {
+            margin: 0;
+        }
+
+        h2 {
+            margin: 0 0 5px 0;
+            font-size: 1.25em;
+        }
+    }
+
+    p.description {
+        font-weight: 200;
+        font-size: 0.95em;
+        margin: 20px 0 0 0;
+        text-align: center;
+        line-height: 1.4em;
+    }
+}
+
+
+@keyframes example {
+    from {
+        width: 500px;
+        height: 500px;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        opacity: .4;
+    }
+
+    to {
+        width: 800px;
+        height: 800px;
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+/* The element to apply the animation to */
+// .background-element {
+//     animation-name: example;
+//     animation-duration: 3s;
+//     animation-direction: alternate-reverse;
+//     animation-iteration-count: infinite;
+// }
