@@ -1,6 +1,5 @@
 <template>
   <section id="projects">
-
     <ProjectContent :currentProject="projects[n]" />
 
     <div class="navigation-projects">
@@ -10,7 +9,9 @@
 
     <div class="navigation-arrows">
       <button @click="toPrevious()"><i class="fas fa-arrow-left"></i></button>
-      <button @click="toNext()"><i class="fas fa-arrow-right"></i></button>
+      <button @click="toNext()">
+        <i class="fas fa-arrow-right"></i>
+      </button>
     </div>
 
     <div class="background-element"></div>
@@ -38,8 +39,9 @@ export default {
       this.n >= this.projects.length - 1 ? (this.n = 0) : (this.n += 1);
     },
     toPrevious() {
-      this.n <= 0 ? this.n = this.projects.length - 1 : this.n -= 1
+      this.n <= 0 ? (this.n = this.projects.length - 1) : (this.n -= 1);
     },
   },
 };
 </script>
+

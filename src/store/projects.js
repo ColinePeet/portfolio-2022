@@ -12,7 +12,7 @@ const projects = [
   },
   {
     title: "Hors-Champs",
-    tType: "website",
+    type: "website",
     image: horschamps,
     website_link: "https://www.hors-champs.be",
     repo_link: "https://www.hors-champs.be",
