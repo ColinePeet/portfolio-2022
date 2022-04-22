@@ -1,24 +1,83 @@
 <template>
   <div class="project">
-    <div class="englobe-title">
-      <h2>{{ currentProject.title }}</h2>
-      <p>{{ currentProject.type }}</p>
+    <Transition name="title-fade">
+    <div class="englobe-title" v-if="!showAnimation1">
+      
+        <!-- <div v-if="!showAnimation1"> -->
+          <h2>{{ currentProject.title }}</h2>
+          <p>{{ currentProject.type }}</p>
+        <!-- </div> -->
+      
     </div>
+    </Transition>
     <div class="img">
       <img :src="currentProject.image" alt="project" class="project-img" />
-      <div class="links">
-        <img src="@/assets/img/logo_git.png" alt="git" />
-        <button><i class="fas fa-arrow-right"></i>Visit website</button>
-      </div>
+      <Transition name="links-fade">
+        <div class="links" v-if="!showAnimation2">
+          <img src="@/assets/img/logo_git.png" alt="git" />
+          <button><i class="fas fa-arrow-right"></i>Visit website</button>
+        </div>
+      </Transition>
     </div>
-    <p class="description">
-      {{ currentProject.description }}
-    </p>
+    <Transition name="content-fade">
+      <p class="description" v-if="!showAnimation">
+        {{ currentProject.description }}
+      </p>
+    </Transition>
   </div>
 </template>
 
 <script>
 export default {
   props: ["currentProject"],
+  data: function () {
+    return {
+      showAnimation1: true,
+      showAnimation: true,
+      showAnimation2: true,
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.showAnimation1 = false;
+    }, 300);
+    setTimeout(() => {
+      this.showAnimation = false;
+    }, 300);
+    setTimeout(() => {
+      this.showAnimation2 = false;
+    }, 300);
+  },
 };
 </script>
+
+
+<style scoped>
+.content-fade-enter-active {
+  transition: 1s all cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.content-fade-enter-from {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.links-fade-enter-active {
+  transition: 1.2s all cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.links-fade-enter-from {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+
+.title-fade-enter-active {
+  transition: 1s all cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.title-fade-enter-from {
+  opacity: 0;
+  transform: scale(0.6);
+}
+</style>

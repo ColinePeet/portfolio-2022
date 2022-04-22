@@ -96,11 +96,10 @@
     height: 700px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
     z-index: 1;
-
     .img {
         width: 700px;
         position: relative;

@@ -45,7 +45,7 @@ export default {
       this.show = false;
       setTimeout(() => {
         this.show = true;
-      }, 1000);
+      }, 700);
     },
     toPrevious() {
       this.n <= 0 ? (this.n = this.projects.length - 1) : (this.n -= 1);
@@ -56,16 +56,16 @@ export default {
 
 <style scoped>
 .slide-fade-enter-active {
-  transition: 1s all cubic-bezier(0.77, 0, 0.175, 1);
+  transition: 1.2s all cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .slide-fade-leave-active {
-  transition: 1s all cubic-bezier(0.77, 0, 0.175, 1);
+  transition: .8s all cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .slide-fade-enter-from {
   opacity: 0;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 .slide-fade-leave-to {
   opacity: 0;
@@ -76,7 +76,7 @@ export default {
 
 .background-fade-enter-active {
   transition: .6s all ease-in-out; /*good for text */
-  transition-delay: .3s;
+  transition-delay: .5s;
 }
 
 .background-fade-leave-active {
@@ -85,11 +85,11 @@ export default {
 
 .background-fade-enter-from {
   opacity: 0;
-  transform: scale(.8) translate(200px, 150px);
+  transform: scale(.8) translateX(100px);
 }
 .background-fade-leave-to {
   opacity: 0;
-  transform: scale(.8) translate(200px, 150px);
+  transform: scale(.8) translateX(200px);
 }
 
 
