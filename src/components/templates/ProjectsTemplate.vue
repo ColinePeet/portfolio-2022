@@ -1,6 +1,8 @@
 <template>
   <section id="projects">
-    <ProjectContent :currentProject="projects[n]" />
+    <Transition name="slide-fade">
+      <ProjectContent :currentProject="projects[n]" v-if="show" />
+    </Transition>
 
     <div class="navigation-projects">
       <button @click="toPrevious()">Previous project</button>
@@ -14,7 +16,9 @@
       </button>
     </div>
 
-    <div class="background-element"></div>
+    <Transition name="background-fade">
+      <div class="background-element" v-if="show"></div>
+    </Transition>
   </section>
 </template>
 
@@ -27,6 +31,7 @@ export default {
   data: function () {
     return {
       n: 0,
+      show: true,
     };
   },
   computed: {
@@ -37,6 +42,10 @@ export default {
   methods: {
     toNext() {
       this.n >= this.projects.length - 1 ? (this.n = 0) : (this.n += 1);
+      this.show = false;
+      setTimeout(() => {
+        this.show = true;
+      }, 1000);
     },
     toPrevious() {
       this.n <= 0 ? (this.n = this.projects.length - 1) : (this.n -= 1);
@@ -45,3 +54,44 @@ export default {
 };
 </script>
 
+<style scoped>
+.slide-fade-enter-active {
+  transition: 1s all cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.slide-fade-leave-active {
+  transition: 1s all cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.slide-fade-enter-from {
+  opacity: 0;
+  transform: scale(1.1);
+}
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: scale(.8);
+}
+
+
+
+.background-fade-enter-active {
+  transition: .6s all ease-in-out; /*good for text */
+  transition-delay: .3s;
+}
+
+.background-fade-leave-active {
+  transition: 1s all cubic-bezier(0.77, 0, 0.175, 1); 
+}
+
+.background-fade-enter-from {
+  opacity: 0;
+  transform: scale(.8) translate(200px, 150px);
+}
+.background-fade-leave-to {
+  opacity: 0;
+  transform: scale(.8) translate(200px, 150px);
+}
+
+
+
+</style>
