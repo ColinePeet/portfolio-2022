@@ -31,7 +31,7 @@ export default {
   data: function () {
     return {
       n: 0,
-      show: true,
+      show: false,
     };
   },
   computed: {
@@ -39,17 +39,26 @@ export default {
       return projects;
     },
   },
-  methods: {
-    toNext() {
-      this.n >= this.projects.length - 1 ? (this.n = 0) : (this.n += 1);
+  watch: {
+    n() {
       this.show = false;
       setTimeout(() => {
         this.show = true;
       }, 700);
     },
+  },
+  methods: {
+    toNext() {
+      this.n >= this.projects.length - 1 ? (this.n = 0) : (this.n += 1);
+    },
     toPrevious() {
       this.n <= 0 ? (this.n = this.projects.length - 1) : (this.n -= 1);
     },
+  },
+  mounted() {
+    setTimeout(() => {
+      this.show = true;
+    }, 100);
   },
 };
 </script>
@@ -60,7 +69,7 @@ export default {
 }
 
 .slide-fade-leave-active {
-  transition: .8s all cubic-bezier(0.77, 0, 0.175, 1);
+  transition: 0.8s all cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .slide-fade-enter-from {
@@ -69,29 +78,24 @@ export default {
 }
 .slide-fade-leave-to {
   opacity: 0;
-  transform: scale(.8);
+  transform: scale(0.8);
 }
 
-
-
 .background-fade-enter-active {
-  transition: .6s all ease-in-out; /*good for text */
-  transition-delay: .5s;
+  transition: 0.6s all ease-in-out; /*good for text */
+  transition-delay: 0.5s;
 }
 
 .background-fade-leave-active {
-  transition: 1s all cubic-bezier(0.77, 0, 0.175, 1); 
+  transition: 1s all cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .background-fade-enter-from {
   opacity: 0;
-  transform: scale(.8) translateX(100px);
+  transform: scale(0.8) translateX(100px);
 }
 .background-fade-leave-to {
   opacity: 0;
-  transform: scale(.8) translateX(200px);
+  transform: scale(0.8) translateX(200px);
 }
-
-
-
 </style>

@@ -1,21 +1,21 @@
 <template>
   <div class="project">
     <Transition name="title-fade">
-    <div class="englobe-title" v-if="!showAnimation1">
-      
+      <div class="englobe-title" v-if="!showAnimation1">
         <!-- <div v-if="!showAnimation1"> -->
-          <h2>{{ currentProject.title }}</h2>
-          <p>{{ currentProject.type }}</p>
+        <h2>{{ currentProject.title }}</h2>
+        <p>{{ currentProject.type }}</p>
         <!-- </div> -->
-      
-    </div>
+      </div>
     </Transition>
     <div class="img">
       <img :src="currentProject.image" alt="project" class="project-img" />
       <Transition name="links-fade">
         <div class="links" v-if="!showAnimation2">
           <img src="@/assets/img/logo_git.png" alt="git" />
-          <button><i class="fas fa-arrow-right"></i>Visit website</button>
+          <button>
+            <span> <i class="fas fa-arrow-right"></i> Visit website</span>
+          </button>
         </div>
       </Transition>
     </div>
@@ -52,7 +52,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style scoped lang="scss">
 .content-fade-enter-active {
   transition: 1s all cubic-bezier(0.77, 0, 0.175, 1);
 }
@@ -71,7 +71,6 @@ export default {
   transform: translateX(-50px);
 }
 
-
 .title-fade-enter-active {
   transition: 1s all cubic-bezier(0.77, 0, 0.175, 1);
 }
@@ -80,4 +79,7 @@ export default {
   opacity: 0;
   transform: scale(0.6);
 }
+
+
+
 </style>
