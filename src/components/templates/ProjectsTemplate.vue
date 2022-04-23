@@ -15,9 +15,9 @@
         <i class="fas fa-arrow-right"></i>
       </button>
     </div>
-
-    <Transition name="background-fade">
-      <div class="background-element" v-if="show"></div>
+    
+    <Transition name="background-fade" >
+      <div class="background-element" v-if="show" :style="`background: radial-gradient(circle at center, ${projects[n].background_color} 0, white 60%)` "></div>
     </Transition>
   </section>
 </template>
@@ -59,6 +59,7 @@ export default {
     setTimeout(() => {
       this.show = true;
     }, 100);
+    
   },
 };
 </script>

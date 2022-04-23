@@ -9,7 +9,11 @@
       </div>
     </Transition>
     <div class="img">
-      <img :src="currentProject.image" alt="project" class="project-img" />
+      <!-- <img :src="currentProject.image" alt="project" class="project-img" /> -->
+      <video width="700" id="video" muted loop class="project-img">
+        <source :src="currentProject.image" type="video/mp4" />
+      </video>
+
       <Transition name="links-fade">
         <div class="links" v-if="!showAnimation2">
           <img src="@/assets/img/logo_git.png" alt="git" />
@@ -47,12 +51,16 @@ export default {
     setTimeout(() => {
       this.showAnimation2 = false;
     }, 300);
+    setTimeout(function () {
+      document.getElementById("video").play();
+    }, 5000);
   },
 };
 </script>
 
 
 <style scoped lang="scss">
+// https://cloudconvert.com/mov-converter
 .content-fade-enter-active {
   transition: 1s all cubic-bezier(0.77, 0, 0.175, 1);
 }
@@ -79,7 +87,4 @@ export default {
   opacity: 0;
   transform: scale(0.6);
 }
-
-
-
 </style>
