@@ -2,12 +2,11 @@
   <div class="project">
     <Transition name="title-fade">
       <div class="englobe-title" v-if="!showAnimation1">
-        <!-- <div v-if="!showAnimation1"> -->
         <h2>{{ currentProject.title }}</h2>
         <p>{{ currentProject.type }}</p>
-        <!-- </div> -->
       </div>
     </Transition>
+    <!-- <h3>{{ currentProject.title }}</h3> -->
     <div class="img">
       <!-- <img :src="currentProject.image" alt="project" class="project-img" /> -->
       <video width="700" id="video" muted loop class="project-img">
@@ -87,4 +86,14 @@ export default {
   opacity: 0;
   transform: scale(0.6);
 }
+
+// h3 {
+//   text-align: left;
+//   width: 100%;
+//   font-size: 2em;
+//   margin: 0 !important;
+//   position: absolute;
+//   top: 30px;
+//   left: 0;
+// }
 </style>
