@@ -1,15 +1,17 @@
 <template>
-  <NavigationElement />
+  <HeaderElement />
+  <MenuNav />
 
   <router-view />
 </template>
 
 
 <script>
-import NavigationElement from "@/components/NavigationElement.vue";
+import HeaderElement from "@/components/atoms/HeaderElement";
+import MenuNav from "@/components/molecules/MenuNav";
 
 export default {
-  components: { NavigationElement },
+  components: { HeaderElement, MenuNav },
 };
 </script>
 
