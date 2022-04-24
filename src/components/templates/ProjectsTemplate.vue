@@ -4,20 +4,28 @@
       <ProjectContent :currentProject="projects[n]" v-if="reveal" />
     </Transition>
 
-    <div class="navigation-projects">
-      <button @click="toPrevious()">Previous project</button>
-      <button @click="toNext()">Next project</button>
-    </div>
+    <transition name="header">
+      <div class="navigation-projects" v-if="elementsReveal">
+        <button @click="toPrevious()">Previous project</button>
+        <button @click="toNext()">Next project</button>
+      </div>
+    </transition>
 
-    <div class="navigation-arrows">
-      <button @click="toPrevious()"><i class="fas fa-arrow-left"></i></button>
-      <button @click="toNext()">
-        <i class="fas fa-arrow-right"></i>
-      </button>
-    </div>
-    
+    <transition name="header">
+      <div class="navigation-arrows" v-if="elementsReveal">
+        <button @click="toPrevious()"><i class="fas fa-arrow-left"></i></button>
+        <button @click="toNext()">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </transition>
+
     <Transition name="background-project">
-      <div class="background-element" v-if="reveal" :style="`background: radial-gradient(circle at center, ${projects[n].background_color} 0, white 60%)` "></div>
+      <div
+        class="background-element"
+        v-if="reveal"
+        :style="`background: radial-gradient(circle at center, ${projects[n].background_color} 0, white 60%)`"
+      ></div>
     </Transition>
   </section>
 </template>
@@ -32,6 +40,7 @@ export default {
     return {
       n: 0,
       reveal: false,
+      elementsReveal: false,
     };
   },
   computed: {
@@ -55,7 +64,13 @@ export default {
       this.n <= 0 ? (this.n = this.projects.length - 1) : (this.n -= 1);
     },
   },
-  mounted() {    
+  mounted() {
+    setTimeout(() => {
+      this.elementsReveal = true;
+    }, 300);
+    setTimeout(() => {
+      this.reveal = true;
+    }, 700);
   },
 };
 </script>

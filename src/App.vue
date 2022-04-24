@@ -1,17 +1,13 @@
 <template>
-  revealAnimation : {{ revealAnimation }}
   <transition name="reveal">
     <FirstAnimation v-if="revealAnimation" />
   </transition>
 
-  <transition name="header">
-    <HeaderElement
-      :toggleMenu="toggleMenu"
-      :showMenu="showMenu"
-      v-if="!revealAnimation"
-    />
-  </transition>
-  
+  <HeaderElement
+    :toggleMenu="toggleMenu"
+    :showMenu="showMenu"
+    v-if="!revealAnimation"
+  />
   <MenuNav :toggleMenu="toggleMenu" v-if="showMenu" />
 
   <router-view v-if="!revealAnimation" />
