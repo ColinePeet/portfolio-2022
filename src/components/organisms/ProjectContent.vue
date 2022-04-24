@@ -50,7 +50,7 @@ export default {
     setTimeout(() => {
       this.showAnimation2 = false;
     }, 300);
-    setTimeout(function () {
+    setTimeout(() => {
       document.getElementById("video").play();
     }, 5000);
   },
