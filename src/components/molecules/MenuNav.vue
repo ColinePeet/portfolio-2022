@@ -1,13 +1,13 @@
 <template>
     <div id="menu">
-        <button @click="close()" class="close">
+        <button @click="toggleMenu()" class="close">
             <span></span>
             <span></span>
         </button>
         <nav>
             <ul>
                 <li>
-                    <router-link to="/projects">Projects</router-link>
+                    <router-link to="/">Projects</router-link>
                 </li>
                 <li>
                     <router-link to="/about">About</router-link>
@@ -24,3 +24,9 @@
         </div>
     </div>
 </template>
+
+<script>
+export default ({
+    props: ['toggleMenu']
+})
+</script>
