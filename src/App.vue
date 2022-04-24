@@ -4,6 +4,8 @@
   <MenuNav :toggleMenu="toggleMenu" v-if="showMenu" />
   </transition>
 
+  <FirstAnimation />
+
   <router-view />
 </template>
 
@@ -11,9 +13,10 @@
 <script>
 import HeaderElement from "@/components/atoms/HeaderElement";
 import MenuNav from "@/components/molecules/MenuNav";
+import FirstAnimation from "@/components/organisms/FirstAnimation"
 
 export default {
-  components: { HeaderElement, MenuNav },
+  components: { HeaderElement, MenuNav, FirstAnimation },
   data() {
     return {
       showMenu: false
