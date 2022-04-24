@@ -1,17 +1,20 @@
 <template>
+  revealAnimation : {{ revealAnimation }}
   <transition name="reveal">
     <FirstAnimation v-if="revealAnimation" />
   </transition>
 
-  <transition name="menu">
-    <div v-if="!revealAnimation">
-      <HeaderElement :toggleMenu="toggleMenu" :showMenu="showMenu" />
-      <transition name="menu">
-        <MenuNav :toggleMenu="toggleMenu" v-if="showMenu" />
-      </transition>
-      <router-view />
-    </div>
+  <transition name="header">
+    <HeaderElement
+      :toggleMenu="toggleMenu"
+      :showMenu="showMenu"
+      v-if="!revealAnimation"
+    />
   </transition>
+  
+  <MenuNav :toggleMenu="toggleMenu" v-if="showMenu" />
+
+  <router-view v-if="!revealAnimation" />
 </template>
 
 
@@ -25,7 +28,7 @@ export default {
   data() {
     return {
       showMenu: false,
-      revealAnimation: true,
+      revealAnimation: sessionStorage.getItem("first-animation") ? false : true,
     };
   },
   methods: {
@@ -35,6 +38,7 @@ export default {
   },
   mounted() {
     setTimeout(() => {
+      sessionStorage.setItem("first-animation", false);
       this.revealAnimation = false;
     }, 2000);
   },

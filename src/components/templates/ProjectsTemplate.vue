@@ -55,11 +55,7 @@ export default {
       this.n <= 0 ? (this.n = this.projects.length - 1) : (this.n -= 1);
     },
   },
-  mounted() {
-    setTimeout(() => {
-      this.reveal = true;
-    }, 100);
-    
+  mounted() {    
   },
 };
 </script>

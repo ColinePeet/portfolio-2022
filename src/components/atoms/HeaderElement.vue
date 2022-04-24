@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <h1>Coline Peetermans</h1>
+    <h1 @click="setAnimation()">Coline Peetermans</h1>
     <transition name="menu">
       <button @click="toggleMenu()" v-show="!showMenu">Menu</button>
     </transition>
@@ -10,5 +10,11 @@
 <script>
 export default {
   props: ["toggleMenu", "showMenu"],
+  methods: {
+    setAnimation() {
+      sessionStorage.clear();
+      location.reload();
+    },
+  },
 };
 </script>
