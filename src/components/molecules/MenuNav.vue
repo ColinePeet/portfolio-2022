@@ -1,10 +1,12 @@
 <template>
   <div id="menu">
+
     <button @click="toggleMenu()" class="close">
       <span></span>
       <span></span>
     </button>
-    <transition name="menu-fade">
+
+    <transition name="menu">
       <div v-if="show" class="nav">
         <nav>
           <ul>
@@ -28,6 +30,7 @@
         </div>
       </div>
     </transition>
+    
   </div>
 </template>
 
@@ -46,20 +49,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.zoom-menu-enter-active {
-  transition: all .8s ease;
-}
-.zoom-menu-leave-active {
-  transition: all .8 ease;
-}
-.zoom-menu-enter-from {
-  transform: scale(0.8);
-  opacity: 0;
-}
-.zoom-menu-leave-to {
-  transform: scale(0.8);
-  opacity: 0;
-}
-</style>

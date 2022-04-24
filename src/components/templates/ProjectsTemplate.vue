@@ -1,7 +1,7 @@
 <template>
   <section id="projects">
-    <Transition name="slide-fade">
-      <ProjectContent :currentProject="projects[n]" v-if="show" />
+    <Transition name="slide-project">
+      <ProjectContent :currentProject="projects[n]" v-if="reveal" />
     </Transition>
 
     <div class="navigation-projects">
@@ -16,8 +16,8 @@
       </button>
     </div>
     
-    <Transition name="background-fade" >
-      <div class="background-element" v-if="show" :style="`background: radial-gradient(circle at center, ${projects[n].background_color} 0, white 60%)` "></div>
+    <Transition name="background-project">
+      <div class="background-element" v-if="reveal" :style="`background: radial-gradient(circle at center, ${projects[n].background_color} 0, white 60%)` "></div>
     </Transition>
   </section>
 </template>
@@ -31,7 +31,7 @@ export default {
   data: function () {
     return {
       n: 0,
-      show: false,
+      reveal: false,
     };
   },
   computed: {
@@ -41,9 +41,9 @@ export default {
   },
   watch: {
     n() {
-      this.show = false;
+      this.reveal = false;
       setTimeout(() => {
-        this.show = true;
+        this.reveal = true;
       }, 700);
     },
   },
@@ -57,46 +57,9 @@ export default {
   },
   mounted() {
     setTimeout(() => {
-      this.show = true;
+      this.reveal = true;
     }, 100);
     
   },
 };
 </script>
-
-<style scoped>
-.slide-fade-enter-active {
-  transition: 1.2s all cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-.slide-fade-leave-active {
-  transition: 0.8s all cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-.slide-fade-enter-from {
-  opacity: 0;
-  transform: scale(1.2);
-}
-.slide-fade-leave-to {
-  opacity: 0;
-  transform: scale(0.8);
-}
-
-.background-fade-enter-active {
-  transition: 0.6s all ease-in-out; /*good for text */
-  transition-delay: 0.5s;
-}
-
-.background-fade-leave-active {
-  transition: 1s all cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-.background-fade-enter-from {
-  opacity: 0;
-  transform: scale(0.8) translateX(100px);
-}
-.background-fade-leave-to {
-  opacity: 0;
-  transform: scale(0.8) translateX(200px);
-}
-</style>

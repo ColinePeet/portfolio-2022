@@ -7,7 +7,7 @@ button{
 }
 
 
-
+/* header */
 .header {
     position: fixed;
     top: 0;
@@ -32,6 +32,7 @@ button{
     }
 }
 
+/* menu */
 #menu{
     position: fixed;
     width: 50vw;
@@ -114,4 +115,35 @@ button{
             }
         }
     }  
+}
+
+
+/* reveal animation */
+#reveal {
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: white;
+  z-index: 1;
+  h1 {
+    z-index: 1;
+  }
+  .background-element {
+    background: radial-gradient(
+      circle at center,
+      #d7d8ed 0,
+      white 60%
+    ) !important;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 100%;
+    position: absolute;
+    top: calc(50% - 500px);
+    left: calc(50% - 500px);
+  }
 }
