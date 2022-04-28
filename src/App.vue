@@ -8,7 +8,9 @@
     :showMenu="showMenu"
     v-if="!revealAnimation"
   />
-  <MenuNav :toggleMenu="toggleMenu" v-if="showMenu" />
+  <transition name="menu">
+    <MenuNav :toggleMenu="toggleMenu" v-if="showMenu" />
+  </transition>
 
   <router-view v-if="!revealAnimation" />
 </template>
