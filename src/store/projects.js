@@ -1,12 +1,13 @@
 import horschamps from "@/assets/img/horschamps.mp4";
 import martinedurt from "@/assets/img/martine.mp4";
-import antartica from "@/assets/img/antartica.mp4";
+import antartica_1 from "@/assets/img/antartica_1.mp4";
+import antartica_2 from "@/assets/img/antartica_2.mp4";
 
 const projects = [
   {
     title: "Martine Durt",
     type: "website",
-    image: martinedurt,
+    image: [martinedurt],
     website_link: "https://www.martinedurt.be",
     repo_link: "https://www.martinedurt.be",
     background_color: '#d9dbf4',
@@ -15,19 +16,19 @@ const projects = [
   {
     title: "Hors-Champs",
     type: "website",
-    image: horschamps,
+    image: [horschamps],
     website_link: "https://www.hors-champs.be",
     repo_link: "https://www.hors-champs.be",
-    background_color:  '#f9efd4',
+    background_color: '#f9efd4',
     description: "Design and development of Hors-Champs’ website. Hors-Champs is a gastronomic restaurant recently built on a domain that served as a farm in the past. In addition to the restaurant, Hors-Champs proposes a beautiful event venue and several bed & breakfast rooms. The website needed to promote these three key activities: restaurant, event venue and bed & breakfast. A custom theme was developed for Wordpress.",
   },
   {
     title: "Antartica",
     type: "website",
-    image: antartica,
+    image: [antartica_1, antartica_2],
     website_link: "https://www.antartica.io/",
     repo_link: "https://www.antartica.io/",
-    background_color:  '#c2e7ea',
+    background_color: '#c2e7ea',
     description: "Design and development of Hors-Champs’ website. Hors-Champs is a gastronomic restaurant recently built on a domain that served as a farm in the past. In addition to the restaurant, Hors-Champs proposes a beautiful event venue and several bed & breakfast rooms. The website needed to promote these three key activities: restaurant, event venue and bed & breakfast. A custom theme was developed for Wordpress.",
   }
 

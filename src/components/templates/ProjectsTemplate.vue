@@ -11,14 +11,14 @@
       </div>
     </transition>
 
-    <transition name="header">
+    <!-- <transition name="slide-project">
       <div class="navigation-arrows" v-if="elementsReveal">
         <button @click="toPrevious()"><i class="fas fa-arrow-left"></i></button>
         <button @click="toNext()">
           <i class="fas fa-arrow-right"></i>
         </button>
       </div>
-    </transition>
+    </transition> -->
 
     <Transition name="background-project">
       <div
