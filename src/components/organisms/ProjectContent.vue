@@ -23,10 +23,22 @@
       <!-- links -->
       <Transition name="slide-links">
         <div class="links" v-if="reveal">
-          <img src="@/assets/img/logo_git.png" alt="git" />
-          <button class="call-to-action">
-            <span> <i class="fas fa-arrow-right"></i> Visit website</span>
-          </button>
+          <a
+            :href="currentProject.repo_link"
+            target="_blank"
+            v-if="currentProject.repo_link"
+          >
+            <img src="@/assets/img/logo_git.png" alt="git" />
+          </a>
+          <a
+            :href="currentProject.website_link"
+            target="_blank"
+            v-if="currentProject.website_link"
+          >
+            <button class="call-to-action">
+              <span> <i class="fas fa-arrow-right"></i> Visit website</span>
+            </button>
+          </a>
         </div>
       </Transition>
     </div>
@@ -38,7 +50,7 @@
       </p>
     </Transition>
 
-    <div class="navigation-arrows">
+    <div class="navigation-arrows" v-if="currentProject.image.length > 1">
       <button @click="toPrevious()"><i class="fas fa-arrow-left"></i></button>
       <button @click="toNext()">
         <i class="fas fa-arrow-right"></i>
