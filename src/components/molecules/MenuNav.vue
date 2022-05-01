@@ -1,6 +1,5 @@
 <template>
   <div id="menu">
-
     <button @click="toggleMenu()" class="close">
       <span></span>
       <span></span>
@@ -17,24 +16,26 @@
               <router-link to="/about">About</router-link>
             </li>
             <li>
-              <button class="download">
-                <i class="fas fa-arrow-down"></i> Resume
-              </button>
+              <a href="cv.pdf" download>
+                <button class="download">
+                  <i class="fas fa-arrow-down"></i> Resume
+                </button>
+              </a>
             </li>
           </ul>
         </nav>
         <div class="links">
-          <div><a>Github</a></div>
-          <div><a>LinkedIn</a></div>
-          <div><a>Contact</a></div>
+          <div><a href="https://github.com/ColinePeet" target="_blank">Github</a></div>
+          <div><a href="https://www.linkedin.com/in/coline-peetermans-991830157" target="_blank">LinkedIn</a></div>
+          <div><a href="mailto:colpeetermans@gmail.com" target="_blank">Contact</a></div>
         </div>
       </div>
     </transition>
-    
   </div>
 </template>
 
 <script>
+
 export default {
   props: ["toggleMenu"],
   data() {
