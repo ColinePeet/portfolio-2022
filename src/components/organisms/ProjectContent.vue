@@ -20,7 +20,7 @@
       <Transition name="slide-links">
         <div class="links" v-if="reveal">
           <img src="@/assets/img/logo_git.png" alt="git" />
-          <button>
+          <button class="call-to-action">
             <span> <i class="fas fa-arrow-right"></i> Visit website</span>
           </button>
         </div>

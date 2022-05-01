@@ -119,71 +119,11 @@
             width: fit-content;
 
             img {
-                width: 25px;
-                margin: 0 5px;
+                width: 28px;
+                margin: 5px 5px;
             }
-
-            button {
-                display: block;
-                background: transparent;
-                border: .5px solid rgba($color: #333333, $alpha: 0.5);
-                font-weight: 600;
+            button{
                 font-size: .9em;
-                margin: 5px;
-                position: relative;
-                width: 164px;
-                height: 34px;
-                border-radius: 34px;
-                padding: 0;
-                margin: 0;
-                overflow: hidden;
-                span{
-                    padding: 8px 18px;
-                    position: absolute;
-                    width: 161px;
-                    height: 31px;
-                    border-radius: 30px;
-                    background-color: white;
-                    top: 1px;
-                    left: 1px;
-                    z-index: 1;
-                }
-
-                i {
-                    font-size: 12px;
-                    margin-right: 8px;
-                }
-
-                &::after {
-                    content: "";
-                    position: absolute;
-                    background-color: black;
-                    top: -2px;
-                    left: -4px;
-                }
-                &::before {
-                    content: "";
-                    position: absolute;
-                    background-color: black;
-                    bottom: -2px;
-                    right: -4px;
-                }
-
-                &:hover::after {
-                    width: 170px;
-                    height: 20px;
-                    animation-duration: 0.6s;
-                    animation-name: border_after_animation;
-                    animation-timing-function: ease-in-out;
-                }
-
-                &:hover::before {
-                    width: 170px;
-                    height: 20px;
-                    animation-duration: 0.5s;
-                    animation-name: border_before_animation;
-                    animation-timing-function: cubic-bezier(0.86, 0, 0.7, 1);
-                }
             }
         }
     }
@@ -272,36 +212,3 @@
 }
 
 
-@keyframes border_after_animation {
-    0% {
-        width: 10px;
-        height: 20px;
-    }
-    50% {
-        width: 170px;
-        height: 20px;
-    }
-    100% {
-        width: 170px;
-        height: 20px;
-    }
-}
-
-@keyframes border_before_animation {
-    0% {
-        width: 0px;
-        height: 20px;
-    }
-    50% {
-        width: 0px;
-        height: 20px;
-    }
-    55% {
-        width: 10px;
-        height: 20px;
-    }
-    100% {
-        width: 170px;
-        height: 20px;
-    }
-}

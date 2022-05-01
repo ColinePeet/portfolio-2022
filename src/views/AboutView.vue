@@ -1,6 +1,16 @@
 <template>
-  <div class="head">
-      <div class="rond bg-1"></div>
-      <div class="rond bg-2"></div>
+  <div>
+      <AboutTemplate />
   </div>
 </template>
+
+<script>
+import AboutTemplate from "@/components/templates/AboutTemplate";
+
+export default {
+  components: {
+    AboutTemplate
+  }
+};
+</script>
+
