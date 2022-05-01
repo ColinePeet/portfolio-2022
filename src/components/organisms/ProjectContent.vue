@@ -91,7 +91,7 @@ export default {
     }, 800);
     setTimeout(() => {
       document.getElementById("video").play();
-    }, 1200);
+    }, 1500);
   },
 };
 </script>
