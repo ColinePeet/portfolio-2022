@@ -10,10 +10,10 @@
         <nav>
           <ul>
             <li>
-              <router-link to="/">Projects</router-link>
+              <router-link to="/" @click="toggleMenu()">Projects</router-link>
             </li>
             <li>
-              <router-link to="/about">About</router-link>
+              <router-link to="/about" @click="toggleMenu()">About</router-link>
             </li>
             <li>
               <a href="cv.pdf" download>

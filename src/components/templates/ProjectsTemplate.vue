@@ -61,7 +61,7 @@ export default {
     }, 300);
     setTimeout(() => {
       this.reveal = true;
-    }, 700);
+    }, 300);
   },
 };
 </script>
