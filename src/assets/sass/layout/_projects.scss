@@ -10,7 +10,8 @@
 
     .background-element {
         // background: radial-gradient(circle at center, #93d4b0 0, white 60%) !important;
-        // background: radial-gradient(circle at center, #eec681 0, white 60%) !important;
+        // background: radial-gradient(circle at center, #c4c6e5 0, white 60%) !important;
+        // background: radial-gradient(circle at center, #dce3cd 0, white 60%) !important;
         width: 800px;
         height: 800px;
         border-radius: 100%;
@@ -45,13 +46,8 @@
     }
 
     .navigation-arrows {
-        // position: absolute;
-        // bottom: 20px;
-        // left: 50%;
-        // transform: translateX(-50%);
+        margin-top: 20px;
         display: flex;
-        z-index: 1;
-
         button {
             background-color: transparent;
             border: .5px solid rgba($color: #333333, $alpha: 0.3);
@@ -125,7 +121,7 @@
 
         .links {
             position: absolute;
-            left: 710px;
+            left: 720px;
             bottom: 0;
             width: fit-content;
 
@@ -167,11 +163,11 @@
     }
 
     p.description {
-        font-weight: 200;
+        font-weight: 300;
         font-size: 0.95em;
         margin: 20px 0 0 0;
         text-align: center;
-        line-height: 1.4em;
+        line-height: 1.5em;
     }
 }
 
