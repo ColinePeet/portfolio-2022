@@ -66,7 +66,7 @@ export default {
     return {
       reveal: false,
       n: 0,
-      currentScreen: false,
+      currentScreen: true,
     };
   },
   watch: {
@@ -75,7 +75,7 @@ export default {
       this.currentScreen = false;
       setTimeout(() => {
         this.currentScreen = true;
-      }, 800);
+      }, 500);
       setTimeout(() => {
         document.getElementById("video").play();
       }, 1200);
@@ -96,11 +96,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.reveal = true;
-      this.currentScreen = true;
     }, 300);
-    setTimeout(() => {
-      this.currentScreen = true;
-    }, 800);
     setTimeout(() => {
       document.getElementById("video").play();
     }, 1500);

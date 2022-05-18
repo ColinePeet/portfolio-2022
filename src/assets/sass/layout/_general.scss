@@ -81,10 +81,6 @@ button{
         border-top: .5px solid rgba($color: black, $alpha: .2);
         width: 100%;
         padding: 20px 0;
-        // height: 100%;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: flex-end;
         div{
             margin: 10px 0;
         }
@@ -138,11 +134,7 @@ button{
     z-index: 1;
   }
   .background-element {
-    background: radial-gradient(
-      circle at center,
-      #c4c6e5 0,
-      white 60%
-    ) !important;
+    background: radial-gradient(circle at center, #ced0ea 0, white 60%) !important;
     width: 1000px;
     height: 1000px;
     border-radius: 100%;
@@ -252,5 +244,13 @@ button.call-to-action {
     100% {
         width: 160px;
         height: 25px;
+    }
+}
+
+
+
+@media screen and (max-width: 900px) {
+    #menu{
+        width: 100vw;
     }
 }
