@@ -112,7 +112,7 @@
   transition: 1s all cubic-bezier(0.77, 0, 0.175, 1);
 }
 .screen-slide-enter-from {
-  transform: translateX(-800px);
+  transform: translateX(800px);
 }
 .screen-slide-leave-to {
   transform: translateX(-800px);

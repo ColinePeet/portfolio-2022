@@ -12,10 +12,10 @@
         position: relative;
         &::after{
             content: '';
-            height: .8px;
+            height: .5px;
             width: 100%;
             position: absolute;
-            background-color: rgba($color: #333333, $alpha: 0.15);
+            background-color: rgba($color: #333333, $alpha: 0.2);
             left: -100%;
             top: 50%;
         }
@@ -37,7 +37,7 @@
             p{
                 font-size: 1.3em;
                 line-height: 1.5em;
-                font-weight: 400;
+                font-weight: 300;
             }
             button{
                 margin-left: auto;
@@ -45,7 +45,7 @@
         }
     }
     .background-element {
-        background: radial-gradient(circle at center, #c4c6e5 0, white 60%) !important;
+        background: radial-gradient(circle at center, #ced0ea 0, white 60%) !important;
         width: 800px;
         height: 800px;
         border-radius: 100%;

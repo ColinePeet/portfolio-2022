@@ -9,9 +9,6 @@
     position: relative;
 
     .background-element {
-        // background: radial-gradient(circle at center, #93d4b0 0, white 60%) !important;
-        // background: radial-gradient(circle at center, #c4c6e5 0, white 60%) !important;
-        // background: radial-gradient(circle at center, #dce3cd 0, white 60%) !important;
         width: 800px;
         height: 800px;
         border-radius: 100%;
@@ -34,7 +31,7 @@
         button {
             background-color: transparent;
             border: none;
-            font-size: .85em;
+            font-size: .9em;
             font-weight: 300;
             margin: 5px 0;
             transition: .2s all ease-in-out;
@@ -42,7 +39,7 @@
             overflow: hidden;
 
             * {
-                transition: .2s all cubic-bezier(0.39, 0.575, 0.565, 1);
+                transition: .2s all ease-in-out;
             }
 
             span {
@@ -90,25 +87,27 @@
     }
 
     .navigation-arrows {
-        margin-top: 20px;
+        margin-top: 10px;
         display: flex;
 
         button {
             background-color: transparent;
             border: .5px solid rgba($color: #333333, $alpha: 0.3);
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             border-radius: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 5px;
             position: relative;
-
+            i{
+                font-size: 14px;
+            }
             &::after {
                 content: "";
-                width: 50px;
-                height: 50px;
+                width: 45px;
+                height: 45px;
                 border-radius: 100%;
                 position: absolute;
             }
@@ -210,7 +209,7 @@
 
     p.description {
         font-weight: 300;
-        font-size: 0.95em;
+        font-size: 0.9em;
         margin: 20px 0 0 0;
         text-align: center;
         line-height: 1.5em;
