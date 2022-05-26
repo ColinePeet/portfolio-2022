@@ -6,18 +6,24 @@
 
     <transition name="header">
       <div class="navigation-projects" v-if="elementsReveal">
-        <button @click="toPrevious()"><i class="fas fa-arrow-left"></i><span>Previous project</span></button>
-        <button @click="toNext()"><span>Next project</span><i class="fas fa-arrow-right"></i></button>
+        <button @click="toPrevious()">
+          <i class="fas fa-arrow-left"></i><span>Previous project</span>
+        </button>
+        <button @click="toNext()">
+          <span>Next project</span><i class="fas fa-arrow-right"></i>
+        </button>
       </div>
     </transition>
 
-    <Transition name="background-project">
-      <div
-        class="background-element"
-        v-if="reveal"
-        :style="`background: radial-gradient(circle at center, ${projects[n].background_color} 0, white 60%)`"
-      ></div>
-    </Transition>
+    <div class="englobe-background">
+      <Transition name="background-project">
+        <div
+          class="background-element"
+          v-if="reveal"
+          :style="`background: radial-gradient(circle at center, ${projects[n].background_color} 0, white 60%)`"
+        ></div>
+      </Transition>
+    </div>
   </section>
 </template>
 

@@ -44,17 +44,19 @@
     </div>
 
     <!-- description -->
-    <Transition name="slide-content">
-      <p class="description" v-if="reveal">
-        {{ currentProject.description }}
-      </p>
-    </Transition>
+    <div class="content">
+      <Transition name="slide-content">
+        <p class="description" v-if="reveal">
+          {{ currentProject.description }}
+        </p>
+      </Transition>
 
-    <div class="navigation-arrows" v-if="currentProject.image.length > 1">
-      <button @click="toPrevious()"><i class="fas fa-arrow-left"></i></button>
-      <button @click="toNext()">
-        <i class="fas fa-arrow-right"></i>
-      </button>
+      <div class="navigation-arrows" v-if="currentProject.image.length > 1">
+        <button @click="toPrevious()"><i class="fas fa-arrow-left"></i></button>
+        <button @click="toNext()">
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
     </div>
   </div>
 </template>
