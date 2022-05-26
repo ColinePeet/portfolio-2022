@@ -1,13 +1,5 @@
 <template>
   <div class="project">
-    <!-- title -->
-    <Transition name="slide-title">
-      <div class="englobe-title" v-if="reveal">
-        <h2>{{ currentProject.title }}</h2>
-        <p>{{ currentProject.type }}</p>
-      </div>
-    </Transition>
-
     <!-- img / video -->
     <div class="img">
       <div class="englobe-screen">
@@ -42,6 +34,14 @@
         </div>
       </Transition>
     </div>
+
+    <!-- title -->
+    <Transition name="slide-title">
+      <div class="englobe-title" v-if="reveal">
+        <h2>{{ currentProject.title }}</h2>
+        <p>{{ currentProject.type }}</p>
+      </div>
+    </Transition>
 
     <!-- description -->
     <div class="content">
