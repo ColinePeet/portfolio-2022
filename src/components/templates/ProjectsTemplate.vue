@@ -7,10 +7,10 @@
     <transition name="header">
       <div class="navigation-projects" v-if="elementsReveal">
         <button @click="toPrevious()">
-          <i class="fas fa-arrow-left"></i><span>Previous project</span>
+          <i class="fas fa-chevron-left"></i>Previous project
         </button>
         <button @click="toNext()">
-          <span>Next project</span><i class="fas fa-arrow-right"></i>
+          Next project<i class="fas fa-chevron-right"></i>
         </button>
       </div>
     </transition>

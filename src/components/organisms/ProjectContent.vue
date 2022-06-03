@@ -1,5 +1,13 @@
 <template>
   <div class="project">
+    <!-- title -->
+    <Transition name="slide-title">
+      <div class="title" v-if="reveal">
+        <p>{{ currentProject.type }}</p>
+        <h2>{{ currentProject.title }}</h2>
+      </div>
+    </Transition>
+
     <!-- img / video -->
     <div class="img">
       <div class="englobe-screen">
@@ -11,52 +19,47 @@
           </template>
         </Transition>
       </div>
-
-      <!-- links -->
-      <Transition name="slide-links">
-        <div class="links" v-if="reveal">
-          <a
-            :href="currentProject.repo_link"
-            target="_blank"
-            v-if="currentProject.repo_link"
-          >
-            <img src="@/assets/img/logo_git.png" alt="git" />
-          </a>
-          <a
-            :href="currentProject.website_link"
-            target="_blank"
-            v-if="currentProject.website_link"
-          >
-            <button class="call-to-action">
-              <span> <i class="fas fa-arrow-right"></i> Visit website</span>
-            </button>
-          </a>
-        </div>
-      </Transition>
     </div>
-
-    <!-- title -->
-    <Transition name="slide-title">
-      <div class="englobe-title" v-if="reveal">
-        <h2>{{ currentProject.title }}</h2>
-        <p>{{ currentProject.type }}</p>
-      </div>
-    </Transition>
 
     <!-- description -->
     <div class="content">
       <Transition name="slide-content">
-        <p class="description" v-if="reveal">
-          {{ currentProject.description }}
-        </p>
+        <div class="description" v-if="revealContent">
+          <p>
+            {{ currentProject.description }}
+          </p>
+        </div>
       </Transition>
 
-      <div class="navigation-arrows" v-if="currentProject.image.length > 1">
-        <button @click="toPrevious()"><i class="fas fa-arrow-left"></i></button>
-        <button @click="toNext()">
-          <i class="fas fa-arrow-right"></i>
-        </button>
-      </div>
+      <Transition name="slide-content">
+        <div class="details" v-if="revealContent">
+          <div class="navigation-arrows">
+            <button @click="toPrevious()">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button @click="toNext()">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <div class="links" v-if="reveal">
+            <a
+              :href="currentProject.website_link"
+              target="_blank"
+              v-if="currentProject.website_link"
+            >
+              <i class="fas fa-chevron-right"></i> Visit website
+            </a>
+            <a
+              :href="currentProject.repo_link"
+              target="_blank"
+              v-if="currentProject.repo_link"
+            >
+              <img src="@/assets/img/logo_git.png" alt="git" />
+            </a>
+          </div>
+        </div>
+      </Transition>
     </div>
   </div>
 </template>
@@ -67,6 +70,7 @@ export default {
   data: function () {
     return {
       reveal: false,
+      revealContent: false,
       n: 0,
       currentScreen: true,
     };
@@ -99,6 +103,9 @@ export default {
     setTimeout(() => {
       this.reveal = true;
     }, 300);
+    setTimeout(() => {
+      this.revealContent = true;
+    }, 600);
     setTimeout(() => {
       document.getElementById("video").play();
     }, 1500);
