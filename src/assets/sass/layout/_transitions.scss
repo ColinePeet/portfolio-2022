@@ -81,7 +81,7 @@
 }
 
 .slide-content-enter-active {
-  transition: .8s all cubic-bezier(0.77, 0, 0.175, 1);
+  transition: 1s all cubic-bezier(0.77, 0, 0.175, 1);
 }
 .slide-links-enter-from, .slide-content-enter-from {
   opacity: 0;

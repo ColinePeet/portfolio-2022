@@ -47,6 +47,7 @@
               :href="currentProject.website_link"
               target="_blank"
               v-if="currentProject.website_link"
+              class="website-link"
             >
               <i class="fas fa-chevron-right"></i> Visit website
             </a>
@@ -105,7 +106,7 @@ export default {
     }, 300);
     setTimeout(() => {
       this.revealContent = true;
-    }, 600);
+    }, 800);
     setTimeout(() => {
       document.getElementById("video").play();
     }, 1500);
