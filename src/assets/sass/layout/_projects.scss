@@ -272,3 +272,48 @@
         transform: translateX(4px);
       }
 }
+
+
+
+
+@media screen and (max-width: 1100px) {
+    .project{
+        width: calc(100vw - 50px);;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        .img{
+            width: calc(100vw - 50px);
+            .englobe-screen{
+                height: auto;
+                padding-top: 56%;
+            }
+        }
+        .title{
+            position: static;
+        }
+        .content{
+            position: static;
+            display: flex;
+            flex-direction: column-reverse;
+            margin: 0;
+            .details{
+                flex-direction: row-reverse;
+                margin: 5px 0;
+                .links{
+                    margin: 0;
+                };
+            }
+        }
+        .description p{
+            font-size: .9em;
+            line-height: 1.5em;
+        }
+    }
+    #projects .navigation-projects{
+        top: auto;
+        bottom: 0;
+        button{
+            font-size: .85em;
+        }
+    }
+}
