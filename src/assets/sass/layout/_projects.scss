@@ -278,9 +278,7 @@
 
 @media screen and (max-width: 1100px) {
     .project{
-        width: calc(100vw - 50px);;
-        margin-bottom: 100px;
-        margin-top: 100px;
+        width: calc(100vw - 50px);
         .img{
             width: calc(100vw - 50px);
             .englobe-screen{
@@ -288,11 +286,7 @@
                 padding-top: 56%;
             }
         }
-        .title{
-            position: static;
-        }
         .content{
-            position: static;
             display: flex;
             flex-direction: column-reverse;
             margin: 0;
@@ -301,6 +295,12 @@
                 margin: 5px 0;
                 .links{
                     margin: 0;
+                    a{
+                        margin-right: 20px;
+                    }
+                    img{
+                        margin-left: 0;
+                    }
                 };
             }
         }
@@ -309,11 +309,22 @@
             line-height: 1.5em;
         }
     }
+    #projects{
+        justify-content: flex-start;
+        min-height: calc(100vh - 130px);
+        margin-top: 130px;
+    }
     #projects .navigation-projects{
         top: auto;
         bottom: 0;
         button{
             font-size: .85em;
         }
+    }
+    #projects .englobe-background{
+        position: fixed;
+    }
+    .background-element{
+        left: -400px !important;
     }
 }
