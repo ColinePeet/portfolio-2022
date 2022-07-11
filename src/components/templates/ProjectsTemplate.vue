@@ -64,7 +64,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.elementsReveal = true;
-    }, 300);
+    }, 800);
     setTimeout(() => {
       this.reveal = true;
     }, 300);

@@ -1,28 +1,7 @@
-/* first reveal */
-.reveal-leave-active {
-    transition: all .8s ease;
-}
-.reveal-leave-to {
-    opacity: 0;
-}
 
-.bg-reveal-enter-active {
-  transition: all 1s ease;
-}
-.bg-reveal-enter-from {
-  transform: scale(0.5);
-}
-
-.title-reveal-enter-active {
-  transition: all 2s ease;
-}
-.title-reveal-enter-from {
-  transform: scale(0.5);
-    opacity: 0;
-}
-
+/* header */
 .header-enter-active {
-  transition: all 2s ease;
+  transition: all 1s ease;
   transition-delay: 1s;
 }
 .header-enter-from {

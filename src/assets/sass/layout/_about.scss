@@ -15,7 +15,7 @@
             height: .5px;
             width: 100%;
             position: absolute;
-            background-color: rgba($color: #333333, $alpha: 0.2);
+            background-color: rgba($color: black, $alpha: .5);
             left: -100%;
             top: 50%;
         }
@@ -45,14 +45,14 @@
         }
     }
     .background-element {
-        background: radial-gradient(circle at center, #ced0ea 0, white 60%) !important;
+        background: radial-gradient(circle at center, #dedff4 0, white 60%) !important;
         width: 800px;
         height: 800px;
         border-radius: 100%;
         position: absolute;
         top: 10%;
         left: -400px;
-        transform: translate(0%, -50%);
+        transform: translate(0%, -40%);
         z-index: -1;
     }
 }
