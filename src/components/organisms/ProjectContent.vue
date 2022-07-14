@@ -27,6 +27,7 @@
         <div class="description" v-if="revealContent">
           <p>
             {{ currentProject.description }}
+            {{ currentProject.description }}
           </p>
         </div>
       </Transition>
