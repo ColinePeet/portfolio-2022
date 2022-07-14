@@ -8,7 +8,6 @@ import weekday from "@/assets/img/weekday.mp4";
 
 
 const projects = [
-
   {
     title: "Martine Durt",
     type: "website",

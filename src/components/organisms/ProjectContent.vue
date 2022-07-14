@@ -2,7 +2,7 @@
   <div class="project">
     <!-- title -->
     <Transition name="slide-title">
-      <div class="title" v-if="reveal">
+      <div class="title" v-if="reveal" ref="title">
         <p>{{ currentProject.type }}</p>
         <h2>{{ currentProject.title }}</h2>
       </div>
@@ -26,7 +26,6 @@
       <Transition name="slide-content">
         <div class="description" v-if="revealContent">
           <p>
-            {{ currentProject.description }}
             {{ currentProject.description }}
           </p>
         </div>
@@ -75,6 +74,7 @@ export default {
       revealContent: false,
       n: 0,
       currentScreen: true,
+      titleFromTop: 0,
     };
   },
   watch: {
@@ -100,6 +100,19 @@ export default {
         ? (this.n = this.currentProject.image.length - 1)
         : (this.n -= 1);
     },
+    scrollEvent() {
+      if (this.$refs.title) {
+        let scrolled = window.scrollY;
+        if (scrolled > this.titleFromTop) {
+          this.$store.commit("set_header_opacity", true);
+        } else {
+          this.$store.commit("set_header_opacity", false);
+        }
+      }
+    },
+  },
+  created() {
+    window.addEventListener("scroll", this.scrollEvent);
   },
   mounted() {
     setTimeout(() => {
@@ -111,6 +124,11 @@ export default {
     setTimeout(() => {
       document.getElementById("video").play();
     }, 1500);
+
+    if (this.$refs.title) {
+      let distance = this.$refs.title.offsetTop;
+      this.titleFromTop = distance;
+    }
   },
 };
 </script>

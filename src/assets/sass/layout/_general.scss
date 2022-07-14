@@ -18,6 +18,8 @@ button {
     align-items: center;
     padding: 5px 20px;
     z-index: 2;
+    background-color: transparent;
+    transition: .2s all ease;
     h1 {
         font-size: 1.4em;
         font-weight: 600;
@@ -259,6 +261,9 @@ button.call-to-action {
 @media screen and (max-width: 1100px) {
     .header {
         padding: 5px 25px;
+        &.white-bg{
+            background-color: rgba($color: white, $alpha: .95);
+        }
         h1{
             font-size: 1.2em;
         }
@@ -295,6 +300,7 @@ button.call-to-action {
 
 @media screen and (max-width: 900px) {
     .header {
+        padding: 0px 15px;
         h1{
             font-size: 1.1em;
         }

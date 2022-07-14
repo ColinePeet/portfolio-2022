@@ -1,8 +1,8 @@
 <template>
   <section id="projects">
-      <Transition name="slide-project">
-        <ProjectContent :currentProject="projects[n]" v-if="reveal" />
-      </Transition>
+    <Transition name="slide-project">
+      <ProjectContent :currentProject="projects[n]" v-if="reveal" />
+    </Transition>
 
     <transition name="header">
       <div class="navigation-projects" v-if="elementsReveal">
@@ -63,11 +63,11 @@ export default {
   },
   mounted() {
     setTimeout(() => {
-      this.elementsReveal = true;
-    }, 800);
-    setTimeout(() => {
       this.reveal = true;
     }, 300);
+    setTimeout(() => {
+      this.elementsReveal = true;
+    }, 800);
   },
 };
 </script>
