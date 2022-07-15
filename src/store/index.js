@@ -9,7 +9,6 @@ export default createStore({
   mutations: {
     set_header_opacity(state, value) {
       state.headerOpacity = value
-      console.log(state.headerOpacity)
     }
   },
   actions: {
