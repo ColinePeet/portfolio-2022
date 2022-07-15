@@ -1,6 +1,13 @@
+:root {
+    --vh: 100vh;
+}
+
 #app {
     font-family: "Poppins", sans-serif;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
+
 
 button {
     cursor: pointer;
@@ -44,6 +51,7 @@ button {
     position: fixed;
     width: 50vw;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     top: 0;
     right: 0;
     background-color: rgba($color: #D7D8ED, $alpha: .8);
@@ -93,7 +101,7 @@ button {
     }
 
     .links {
-        border-top: .5px solid rgba($color: black, $alpha: 1);
+        // border-top: .5px solid rgba($color: black, $alpha: 1);
         width: 100%;
         padding: 20px 0;
 
