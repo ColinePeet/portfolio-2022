@@ -180,7 +180,22 @@
             align-items: center;
             margin-left: 5px;
             position: relative;
-
+            &::after {
+                content: "";
+                width: 38px;
+                height: 38px;
+                border-radius: 100%;
+                position: absolute;
+            }
+            &:hover::after {
+                border-top: 1px solid rgba($color: black, $alpha: 1);
+                border-right: 1px solid rgba($color: black, $alpha: 1);
+                border-bottom: 1px solid rgba($color: black, $alpha: 1);
+                border-left: 1px solid rgba($color: black, $alpha: 1);
+                animation-duration: 0.6s;
+                animation-name: border_animation;
+                animation-timing-function: ease-in-out;
+            }
             i {
                 font-size: 14px;
             }
@@ -260,27 +275,6 @@ video::-webkit-media-controls {
 }
 
 
-
-@media screen and (min-width: 800px) {
-    .navigation-arrows button{
-        &::after {
-            content: "";
-            width: 38px;
-            height: 38px;
-            border-radius: 100%;
-            position: absolute;
-        }
-        &:hover::after {
-            border-top: 1px solid rgba($color: black, $alpha: 1);
-            border-right: 1px solid rgba($color: black, $alpha: 1);
-            border-bottom: 1px solid rgba($color: black, $alpha: 1);
-            border-left: 1px solid rgba($color: black, $alpha: 1);
-            animation-duration: 0.6s;
-            animation-name: border_animation;
-            animation-timing-function: ease-in-out;
-        }
-    }
-}
 
 
 @media screen and (max-width: 1100px) {
