@@ -305,11 +305,9 @@ video::-webkit-media-controls {
     }
     #projects{
         justify-content: flex-start;
-        // min-height: calc(100vh - 130px);
         min-height: 100vh;
         min-height: calc(var(--vh, 1vh) * 100);
         padding-top: 130px;
-        // margin-top: 130px;
     }
     #projects .navigation-projects{
         position: absolute;
@@ -317,6 +315,7 @@ video::-webkit-media-controls {
         bottom: 10px;
         button{
             font-size: .85em;
+            padding: 0;
         }
     }
     #projects .englobe-background{

@@ -4,13 +4,16 @@
       <div class="flex" v-if="reveal">
         <div class="text">
           <p>
-            I am a challenge driven front-end developer with a true passion for digital
-            experiences. I designed and builded multiples web projects such as showcase sites, wordpress themes and
-            platforms. Solution oriented and always willing to learn something new !
+            I am a challenge driven front-end developer with a true passion for
+            digital experiences. I designed and builded multiples web projects
+            such as showcase sites, wordpress themes and platforms. Solution
+            oriented and always willing to learn something new !
           </p>
-          <button class="call-to-action">
-            <span><i class="fas fa-arrow-right"></i> Contact</span>
-          </button>
+          <a href="mailto:colpeetermans@gmail.com" target="_blank">
+            <button class="call-to-action">
+              <span><i class="fas fa-arrow-right"></i> Contact</span>
+            </button></a
+          >
         </div>
         <div class="background-element"></div>
       </div>

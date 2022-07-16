@@ -33,11 +33,11 @@
 
       <Transition name="slide-content">
         <div class="details" v-if="revealContent">
-          <div class="navigation-arrows">
-            <button @click="toPrevious()">
+          <div class="navigation-arrows" >
+            <button @click="toPrevious()" v-if="currentProject.image.length > 1">
               <i class="fas fa-chevron-left"></i>
             </button>
-            <button @click="toNext()">
+            <button @click="toNext()" v-if="currentProject.image.length > 1">
               <i class="fas fa-chevron-right"></i>
             </button>
           </div>
@@ -79,14 +79,14 @@ export default {
   },
   watch: {
     n() {
-      // document.getElementById("video").pause();
-      // this.currentScreen = false;
-      // setTimeout(() => {
-      //   this.currentScreen = true;
-      // }, 500);
+      document.getElementById("video").pause();
+      this.currentScreen = false;
+      setTimeout(() => {
+        this.currentScreen = true;
+      }, 500);
       setTimeout(() => {
         document.getElementById("video").play();
-      }, 1200);
+      }, 600);
     },
   },
   methods: {
