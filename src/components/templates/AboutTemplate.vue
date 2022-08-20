@@ -4,9 +4,9 @@
       <div class="flex" v-if="reveal">
         <div class="text">
           <p>
-            I am a challenge driven front-end developer with a true passion for
+            I am a challenge driven front-end developer with a true passion for all
             digital experiences. I designed and builded multiples web projects
-            such as showcase sites, wordpress themes and platforms. Solution
+            such as showcase sites, WordPress themes and SaaS platforms. Solution
             oriented and always willing to learn something new !
           </p>
           <a href="mailto:colpeetermans@gmail.com" target="_blank">

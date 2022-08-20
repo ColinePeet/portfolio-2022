@@ -17,16 +17,16 @@ const projects = [
     website_link: "https://www.martinedurt.be",
     repo_link: "https://github.com/ColinePeet/martine",
     background_color: '#c9dae5',
-    description: "Simple showcase website for the belgian painter Martine Durt to show her latest paintings and bio. Personal project designed and built with HTML5, Bootstrap, CSS3/Sass and JavaScript/jQuery.",
+    description: "Simple showcase website for the belgian painter Martine Durt to show her latest paintings and bio. Personal project designed and built for the artist with HTML5, Bootstrap, CSS3/Sass and JavaScript/jQuery.",
   },
   {
     title: "Follaw.sv",
-    type: "platform",
+    type: "SaaS platform",
     image: [follaw_1, follaw_2, follaw_3],
     website_link: "https://www.saper-vedere.eu/follaw-sv-un-outil-de-monitoring-pour-la-veille-legislative-et-la-veille-institutionnelle/",
     repo_link: null,
     background_color: '#d2daf7',
-    description: "Follaw is a monitoring platform for all public affairs issues. Platform developed as lead front-end at Saper Vedere with the team of developers. Made with the framework Vue.js",
+    description: "Follaw is a monitoring platform for all public affairs issues. Platform developed as lead front-end at Saper Vedere with the team of developers (designers, frontends, backends & devops). Made with the framework Vue.js (Vuex, Vue Router, Axios).",
   },
   {
     title: "Hors-Champs",
@@ -35,7 +35,7 @@ const projects = [
     website_link: "https://www.hors-champs.be",
     repo_link: "https://github.com/ColinePeet/horschamps",
     background_color: '#d7cfb7',
-    description: "Custom wordpress theme designed and developed for Hors-Champs, a gastronomic restaurant who also proposes a beautiful event venue and several bed & breakfast rooms. The website needed to promote their three key activities. Personal project made with HTML5, JS/jQuery, CSS3/Sass and PHP (WordPress integration and custom post type).",
+    description: "Custom WorPpress theme designed and developed for Hors-Champs, a gastronomic restaurant who also proposes a beautiful event venue and several bed & breakfast rooms. The website needed to promote their three key activities. Personal project made with HTML5, JS/jQuery, CSS3/Sass and PHP (WordPress integration and custom post type).",
   },
   {
     title: "Antartica",
