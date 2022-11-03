@@ -35,7 +35,7 @@ const projects = [
     website_link: "https://www.hors-champs.be",
     repo_link: "https://github.com/ColinePeet/horschamps",
     background_color: '#d7cfb7',
-    description: "Custom WorPpress theme designed and developed for Hors-Champs, a gastronomic restaurant who also proposes a beautiful event venue and several bed & breakfast rooms. The website needed to promote their three key activities. Personal project made with HTML5, JS/jQuery, CSS3/Sass and PHP (WordPress integration and custom post type).",
+    description: "Custom WordPress theme designed and developed for Hors-Champs, a gastronomic restaurant who also proposes a beautiful event venue and several bed & breakfast rooms. The website needed to promote their three key activities. Personal project made with HTML5, JS/jQuery, CSS3/Sass and PHP (WordPress integration and custom post type).",
   },
   {
     title: "Antartica",

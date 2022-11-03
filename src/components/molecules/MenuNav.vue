@@ -9,16 +9,16 @@
       <div v-if="show" class="nav">
         <nav>
           <ul>
-            <li>
+            <li :class="{'active' : $route.path === '/'}">
               <router-link to="/" @click="toggleMenu()">Projects</router-link>
             </li>
-            <li>
+            <li :class="{'active' : $route.path === '/about'}">
               <router-link to="/about" @click="toggleMenu()">About</router-link>
             </li>
             <li>
               <a href="cv.pdf" download>
                 <button class="download">
-                  <i class="fas fa-arrow-down"></i> Resume
+                  <i class="fas fa-chevron-down"></i> Resume
                 </button>
               </a>
             </li>

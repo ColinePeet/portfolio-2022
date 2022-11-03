@@ -11,7 +11,7 @@
           </p>
           <a href="mailto:colpeetermans@gmail.com" target="_blank">
             <button class="call-to-action">
-              <span><i class="fas fa-arrow-right"></i> Contact</span>
+              <span><i class="fas fa-chevron-right"></i> Contact</span>
             </button></a
           >
         </div>
