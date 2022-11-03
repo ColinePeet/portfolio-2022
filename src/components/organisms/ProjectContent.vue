@@ -123,7 +123,7 @@ export default {
     }, 800);
     setTimeout(() => {
       document.getElementById("video").play();
-    }, 1500);
+    }, 1200);
 
     if (this.$refs.title) {
       let distance = this.$refs.title.offsetTop;

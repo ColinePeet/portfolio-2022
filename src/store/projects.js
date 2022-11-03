@@ -19,6 +19,15 @@ const projects = [
     description: "Simple showcase website for the belgian painter Martine Durt to show her latest paintings and bio. Personal project designed and built for the artist with HTML5, Bootstrap, CSS3/Sass and JavaScript/jQuery.",
   },
   {
+    title: "Antartica",
+    type: "website",
+    image: [antartica_1, antartica_2, antartica_3],
+    website_link: "https://www.antartica.io/",
+    repo_link: null,
+    background_color: '#cae3e8',
+    description: "Antartica's showcase website made as a front-end developer at Antartica agency with HTML5, CSS3/Sass and JavaScript/jQuery.",
+  },
+  {
     title: "Follaw",
     type: "SaaS platform",
     image: [follaw_1, follaw_2],
@@ -37,23 +46,14 @@ const projects = [
     description: "Custom WordPress theme designed and developed for Hors-Champs, a gastronomic restaurant who also proposes a beautiful event venue and several bed & breakfast rooms. The website needed to promote their three key activities. Personal project made with HTML5, JS/jQuery, CSS3/Sass and PHP (WordPress integration and custom post type).",
   },
   {
-    title: "Antartica",
-    type: "website",
-    image: [antartica_1, antartica_2, antartica_3],
-    website_link: "https://www.antartica.io/",
-    repo_link: null,
-    background_color: '#cae3e8',
-    description: "Antartica's showcase website made as a front-end developer at Antartica agency with HTML5, CSS3/Sass and JavaScript/jQuery.",
-  },
-  {
     title: "Weekday",
     type: "newsletter",
     image: [weekday],
     website_link: null,
     repo_link: "https://github.com/ColinePeet/weekday-newsletter",
     background_color: '#dce3cd',
-    description: "Newsletter of a typical 'weekly edit' of the Weekday brand,  which puts a selection of items in value. Project designed and developed as a training exercise with HTML5.",
-  },
+    description: "Newsletter of a typical 'weekly edit' of the Weekday brand,  which puts a selection of items in value. Project designed and developed with HTML5.",
+  }
 ]
 
 
