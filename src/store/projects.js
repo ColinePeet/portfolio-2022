@@ -7,7 +7,6 @@ import antartica_3 from "@/assets/img/antartica_3.mp4";
 import weekday from "@/assets/img/weekday.mp4";
 import follaw_1 from "@/assets/img/follaw_1.mp4";
 import follaw_2 from "@/assets/img/follaw_2.mp4";
-import follaw_3 from "@/assets/img/follaw_3.mp4";
 
 const projects = [
   {
@@ -20,10 +19,10 @@ const projects = [
     description: "Simple showcase website for the belgian painter Martine Durt to show her latest paintings and bio. Personal project designed and built for the artist with HTML5, Bootstrap, CSS3/Sass and JavaScript/jQuery.",
   },
   {
-    title: "Follaw.sv",
+    title: "Follaw",
     type: "SaaS platform",
-    image: [follaw_1, follaw_2, follaw_3],
-    website_link: "https://www.saper-vedere.eu/follaw-sv-un-outil-de-monitoring-pour-la-veille-legislative-et-la-veille-institutionnelle/",
+    image: [follaw_1, follaw_2],
+    website_link: null,
     repo_link: null,
     background_color: '#d2daf7',
     description: "Follaw is a monitoring platform for all public affairs issues. Platform developed as lead front-end at Saper Vedere with the team of developers (designers, frontends, backends & devops). Made with the framework Vue.js (Vuex, Vue Router, Axios).",
