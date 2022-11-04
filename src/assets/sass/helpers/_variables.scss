@@ -32,3 +32,7 @@
         timing-function: ease-in;
       }
  } 
+
+
+$blue : rgb(64,23,235);
+$transition: .1s all cubic-bezier(0.075, 0.82, 0.165, 1)

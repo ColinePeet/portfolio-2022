@@ -13,7 +13,7 @@
       <div class="englobe-screen">
         <Transition name="screen-slide">
           <template v-if="currentScreen">
-            <video width="700" id="video" muted loop webkit-playsinline playsinline class="project-img">
+            <video width="700" id="video" muted loop class="project-img">
               <source :src="currentProject.image[n]" type="video/mp4" />
             </video>
           </template>
@@ -123,7 +123,7 @@ export default {
     }, 800);
     setTimeout(() => {
       document.getElementById("video").play();
-    }, 1200);
+    }, 1100);
 
     if (this.$refs.title) {
       let distance = this.$refs.title.offsetTop;
