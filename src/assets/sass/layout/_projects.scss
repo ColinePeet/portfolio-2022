@@ -320,9 +320,9 @@ video::-webkit-media-controls {
 
 @media screen and (max-width: 1100px) {
     .project{
-        width: calc(100vw - 80px);
+        width: calc(100vw - 100px);
         .img{
-            width: calc(100vw - 80px);
+            width: calc(100vw - 100px);
             .englobe-screen{
                 height: auto;
                 padding-top: 56%;
@@ -365,6 +365,10 @@ video::-webkit-media-controls {
 
 @media screen and (max-width: 770px) {
     .project{
+        width: calc(100vw - 50px);
+        .img{
+            width: calc(100vw - 50px);
+        }
         .content{
             display: flex;
             flex-direction: column;

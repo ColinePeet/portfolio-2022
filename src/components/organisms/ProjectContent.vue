@@ -7,14 +7,13 @@
         <h2>{{ currentProject.title }}</h2>
       </div>
     </Transition>
-
     <!-- img / video -->
     <div class="img">
       <div class="englobe-screen">
         <Transition name="screen-slide">
           <template v-if="currentScreen">
-            <video width="700" id="video" muted loop class="project-img">
-              <source :src="currentProject.image[n]" type="video/mp4" />
+            <video width="700" id="video" autoplay muted playsinline loop class="project-img" poster="@/assets/img/screen_background.png" :src="currentProject.image[n]">
+              <!-- <source :src="currentProject.image[n]" type="video/mp4" /> -->
             </video>
           </template>
         </Transition>
