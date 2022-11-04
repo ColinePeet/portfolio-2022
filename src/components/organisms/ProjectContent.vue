@@ -27,7 +27,6 @@
           :class="{ active: n === i }"
           @click="n = i"
         >
-          <!-- {{ i }} -->
         </div>
       </div>
     </div>

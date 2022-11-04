@@ -18,7 +18,7 @@
             <li>
               <a href="cv.pdf" download>
                 <button class="download">
-                  <i class="fas fa-chevron-down"></i> Resume
+                  <span><i class="fas fa-chevron-down"></i> Resume</span>
                 </button>
               </a>
             </li>
