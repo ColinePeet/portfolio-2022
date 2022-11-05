@@ -334,7 +334,6 @@ video::-webkit-media-controls {
             margin-bottom: 60px;
         }
         .description p{
-            font-size: .9em;
             line-height: 1.5em;
         }
     }
@@ -377,9 +376,9 @@ video::-webkit-media-controls {
                 flex-direction: row-reverse;
                 margin: 5px 0;
                 .links{
-                    margin: 0;
+                    margin: 10 0 0 0;
                     a{
-                        margin-right: 20px;
+                        margin-right: 10px;
                     }
                     svg{
                         margin-left: 0;
