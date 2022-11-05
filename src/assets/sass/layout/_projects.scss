@@ -351,6 +351,7 @@ video::-webkit-media-controls {
         justify-content: center;
         top: auto;
         bottom: 20px;
+        z-index: 1;
         button{
             font-size: .85em;
             padding: 0;

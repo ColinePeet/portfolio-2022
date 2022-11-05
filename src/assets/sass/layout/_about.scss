@@ -45,7 +45,9 @@
         button.call-to-action{
             margin-left: 0;
             border: 1px solid $blue !important;
-            span{font-size: 1em;}
+            font-size: 1em;
+            width: 130px;
+            span{font-size: 1em;    transform: translateY(-1px);}
         }
     }
 }
