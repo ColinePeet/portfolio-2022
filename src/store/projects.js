@@ -1,18 +1,21 @@
 import horschamps_1 from "@/assets/img/hors_champs_1.mp4";
 import horschamps_2 from "@/assets/img/hors_champs_2.mp4";
-import martinedurt from "@/assets/img/martine.mp4";
+import horschamps_3 from "@/assets/img/hors_champs_3.mp4";
+import martinedurt_1 from "@/assets/img/martine_1.mp4";
+import martinedurt_2 from "@/assets/img/martine_1.mp4";
 import antartica_1 from "@/assets/img/antartica_1.mp4";
 import antartica_2 from "@/assets/img/antartica_2.mp4";
 import antartica_3 from "@/assets/img/antartica_3.mp4";
 import weekday from "@/assets/img/weekday.mp4";
 import follaw_1 from "@/assets/img/follaw_1.mp4";
 import follaw_2 from "@/assets/img/follaw_2.mp4";
+import follaw_3 from "@/assets/img/follaw_3.mp4";
 
 const projects = [
   {
     title: "Martine Durt",
     type: "website",
-    image: [martinedurt],
+    image: [martinedurt_1, martinedurt_2],
     website_link: "https://www.martinedurt.be",
     repo_link: "https://github.com/ColinePeet/martine",
     background_color: '#c9dae5',
@@ -30,7 +33,7 @@ const projects = [
   {
     title: "Follaw",
     type: "SaaS platform",
-    image: [follaw_1, follaw_2],
+    image: [follaw_2, follaw_3, follaw_1],
     website_link: null,
     repo_link: null,
     background_color: '#d2daf7',
@@ -39,7 +42,7 @@ const projects = [
   {
     title: "Hors-Champs",
     type: "website",
-    image: [horschamps_1, horschamps_2],
+    image: [horschamps_1, horschamps_2, horschamps_3],
     website_link: "https://www.hors-champs.be",
     repo_link: "https://github.com/ColinePeet/horschamps",
     background_color: '#d7cfb7',
