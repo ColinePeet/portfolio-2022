@@ -9,7 +9,7 @@
     </Transition>
     <!-- img / video -->
     <div class="img">
-      <div class="englobe-screen">
+      <div class="englobe-screen" :class="currentProject.title">
         <Transition name="screen-slide">
           <template v-if="currentScreen">
             <video width="700" id="video" autoplay muted playsinline loop class="project-img" :src="currentProject.image[n]">

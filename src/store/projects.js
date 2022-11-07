@@ -2,7 +2,7 @@ import horschamps_1 from "@/assets/img/hors_champs_1.mp4";
 import horschamps_2 from "@/assets/img/hors_champs_2.mp4";
 import horschamps_3 from "@/assets/img/hors_champs_3.mp4";
 import martinedurt_1 from "@/assets/img/martine_1.mp4";
-import martinedurt_2 from "@/assets/img/martine_1.mp4";
+import martinedurt_2 from "@/assets/img/martine_2.mp4";
 import antartica_1 from "@/assets/img/antartica_1.mp4";
 import antartica_2 from "@/assets/img/antartica_2.mp4";
 import antartica_3 from "@/assets/img/antartica_3.mp4";
